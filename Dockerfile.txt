@@ -1,0 +1,12 @@
+FROM openjdk:17
+
+WORKDIR /JDBC-App
+
+COPY src/App.java .
+
+COPY mysql-connector-j-9.3.0 .
+
+RUN javac -cp mysql-connector-j-9.3.0 App.java
+
+CMD [ "java","-cp","mysql-connector-j-9.3.0","App" ]
+

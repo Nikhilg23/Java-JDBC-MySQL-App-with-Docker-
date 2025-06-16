@@ -16,7 +16,7 @@ public class App {
         Scanner sc =new Scanner(System.in);
         int input=sc.nextInt();
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc_db","root","Nikhilg");
+        Connection con=DriverManager.getConnection("jdbc:mysql://mysql:3306/jdbc_db","root","Nikhilg");
         
         if (input==1) {
             System.out.println("Insert...... ");
