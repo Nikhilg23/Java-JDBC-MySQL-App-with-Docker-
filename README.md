@@ -74,12 +74,13 @@ sudo apt-get update
 sudo apt-get install docker-compose-plugin
 ```
 
-#### Build docker compose file
+#### 🚀 Start with Docker Compose
 ```bash
 docker compose up --build -d
 ```
-#### User input run :--
+#### 💬 Run the Java app interactively
 ``` bash
+docker ps
 docker attach "container id"
 ```
 
