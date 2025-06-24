@@ -1,0 +1,30 @@
+version: "3.8"
+services:
+  mysql:
+    image: mysql
+    container_name: mysql
+    environment:
+     - MYSQL_ROOT_PASSWORD=YOUR_PASSWORD
+     - MYSQL_DATABASE=JDBC_DB
+    ports:
+      - 3306:3306
+    networks:
+      - JDBC_NETWORK
+  
+  java-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: java-app
+    environment:
+      - MYSQL_ROOT_PASSWORD=YOUR_PASSWORD
+      - MYSQL_DATABASE=JDBC_DB
+    networks:
+      - JDBC_NETWORK
+    stdin_open: true
+    tty: true
+
+
+networks:
+ JDBC_NETWORK:
+
