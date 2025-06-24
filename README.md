@@ -61,7 +61,7 @@ CREATE DATABASE jdbc_db;
 
 🗂️ Step 2: Create Table
 
-bash
+mysql
 USE jdbc_db;
 
 CREATE TABLE jdbc_table (
