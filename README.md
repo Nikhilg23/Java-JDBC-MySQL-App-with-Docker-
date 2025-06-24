@@ -66,6 +66,28 @@ CREATE TABLE jdbc_table (
 );
 ```
 
+## 🐳 Docker Compose Setup
+
+### 📥 Install Docker Compose (if not already installed)
+```bash
+sudo apt-get update
+sudo apt-get install docker-compose-plugin
+```
+
+#### Build docker compose file
+```bash
+docker compose up --build -d
+```
+#### User input run :--
+``` bash
+docker attach "container id"
+```
+
+##🛑 Stop All Containers
+```bash
+docker compose down
+```
+
 ✅ Done \
 You're now ready to use your Java JDBC + MySQL app with Docker. 🎉
 
